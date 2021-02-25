@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tribe</title>
+<link href="../CSS/Suggest.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="form">
+	<div class="Header">
+			<div class="Web_title"><a href="Home.html"><img src="../image/Web_Title_black.png" alt=""/></a></div>
+			<div class="Login"><a href="../login.html">Login</a></div>
+		</div>
+	
+	
+		<div class="Guidance">
+			<span><img src="../image/Guidance_1.png" alt=""/><a href="Home.html">Home</a></span>
+			<span><img src="../image/Guidance_2.png" alt=""/><a href="Information.html">Information</a></span>
+			<span><img src="../image/Guidance_3.png" alt=""/><a href="Blogger.html">Blogger</a></span>
+			<span><img src="../image/Guidance_4.png" alt=""/><a href="Suggest.html">Suggest</a></span>	
+		</div>
+		<form method="post" enctype="multipart/form-data">
+			<div class="journal">
+				<span>What's you suggest?</span><br>
+				
+				<div class="textbx">
+					name:<textarea rows="1" cols="20" id="IParea" placeholder=" your name"></textarea>
+				</div>
+				<div class="textbx">
+					<textarea rows="7" cols="50" id="IParea1" placeholder="any ideas???"></textarea>
+				</div>
+				
+				<div class="fileBut">
+					<input type="file">
+				</div>
+				
+				<div class="sendBut">
+					<span onClick="CE()">Enter</span>
+				</div>
+			</div>
+			<div class="Suggest">
+				<div class="Suggest_name" id="name"></div>
+				<div class="Suggest_text" id="text"></div>
+			</div>
+			
+			<script>
+			function CE(){
+				
+				var now= new Date();
+			  	var year=now.getFullYear();
+			  	var month=now.getMonth();
+			  	var date=now.getDate();
+				var hour=now.getHours();
+				var minutes=now.getMinutes();
+				var seconds=now.getSeconds();
+				var inputtext = document.getElementById("IParea").value;
+				var inputtext1 = document.getElementById("IParea1").value;
+				document.getElementById("name").innerHTML=inputtext;
+				document.getElementById("text").innerHTML=inputtext1;
+				document.getElementById("text").innerHTML=year+"/"+(month+1)+"/"+date+"   "+hour+":"+minutes+":"+seconds+"</br>"+inputtext1;
+				
+			}
+			</script>
+			
+			<div class="table1">
+			<table id="Tribe">
+			  <tbody>
+				<tr>
+				  <td width="98" rowspan="2" align="left" valign="top"><img src="../image/Guidance_1.png" alt="">CiCi</td>
+				  <td align="left" valign="top">
+					  2020/10/30 20:52:30<br>
+					  歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。</td>
+			    </tr>
+				<tr>
+				  <td width="886" align="left" valign="top"></td>
+				</tr>
+				  <tr height="50px"></tr>
+				<tr>
+				  <td rowspan="2" align="left" valign="top"><img src="../image/Guidance_2.png" alt="">XiXi</td>
+				  <td align="left" valign="top">
+					  2020/10/30 20:52:30<br>
+					  歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。</td>
+			    </tr>
+				<tr>
+				  <td align="left" valign="top"></td>
+				</tr>
+				  <tr height="50px"></tr>
+				<tr>
+				  <td rowspan="2" align="left" valign="top"><img src="../image/Guidance_3.png" alt="">DiDi</td>
+				  <td align="left" valign="top">
+					  2020/10/30 20:52:30<br>
+					  歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。</td>
+			    </tr>
+				<tr>
+				  <td align="left" valign="top">&nbsp;</td>
+				</tr>
+				  <tr height="50px"></tr>
+				<tr>
+				  <td rowspan="2" align="left" valign="top"><img src="../image/Guidance_4.png" alt="">EiEi</td>
+				  <td align="left" valign="top">
+					  2020/10/30 20:52:30<br>
+					  歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。歪比歪比，歪比巴卜。</td>
+			    </tr>
+				<tr>
+				  <td align="left" valign="top">&nbsp;</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+
+		</form>
+
+		
+		<div class="foot">
+			<pre>xxxxxxx  (0000000)   From.xxx  Class:xxx  Course:ITE3006<br>Whatsapp:12345678   E-mail:12345678@gmail.com
+			</pre>
+		</div>
+		
+	</div>
+</body>
+</html>

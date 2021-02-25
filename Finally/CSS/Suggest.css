@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width:100%;
+	height:100%;
+	background-image: url("../image/Title_bg1.png");
+	font-family: cursive;
+}
+pre{font-family:cursive;}
+
+.Login a {color:black;}
+.Login a:hover{color: aqua;}
+
+.Guidance a{color:black; text-decoration: none;}
+.Guidance a:hover{color:aqua;}
+/*整個表格*/
+.form{
+	position: absolute;
+	top:20px;
+	left: 300px;
+	width: 1300px;
+	height:auto;
+	background-color: white;
+	border-radius: 25px;
+	box-shadow:20px -12px 15px 1px rgba(0,0,0,0.5);
+}
+.Header{
+	height: 100px;
+}
+
+.Web_title{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+}
+
+.Login{
+	color:black;
+	position: absolute;
+	left: 1200px;
+	top:60px;
+	font-size: 20px;
+}
+/*置頂網站主題*/
+
+
+
+.Guidance{
+	width: 1280px;
+	height: 50px;
+	border-bottom-style:solid;
+	border-top-style: solid;
+	border-image: linear-gradient(to right,#000,#FFF);
+	border-image-slice:1;
+	margin: 0 0 0 10px;
+}
+/*導航欄樣式*/
+
+.Guidance span{
+	float: left;
+	margin: 6px 60px 0 20px;
+	font-size: 35px;
+}
+.Guidance span:hover{
+	color:#00E3FF;
+	transform: scale(1.1);
+	transition: 0.5s;
+	top: 0;
+	left: 0;
+}
+
+.Guidance span:hover img{
+	transform:scale(1.2);
+	transition: 0.5s;
+}
+/*導航欄文字格式*/
+
+/*以下修改範圍以下修改範圍以下修改範圍以下修改範圍以下修改範圍*/
+.journal{
+	height:220px;
+	width: 500px;
+	margin: 20px 0 20px 100px;
+	padding: 20px 0 0 20px;
+	border-style: solid;
+}
+.textbx{
+	margin: 10px 0 0 0;
+}
+
+.fileBut{
+	float:left;
+}
+
+.sendBut{
+	float:right;
+	margin: 0 50px 0 0;
+	border-style:solid;
+	border-width: 2px;
+	background-color: aliceblue;
+}
+.sendBut:hover{
+	background-color:#A3E9FB;
+}
+/**用于给js输出位置***********************/
+.Suggest{margin:0 0 50px 0;}
+.Suggest_name{
+	font-size: 20px;
+	margin: 0px 0 0 100px;
+	width: 100px;
+	height: auto;
+	float: left;
+	
+}
+.Suggest_text{
+	font-size: 20px;
+	height: auto;
+	width: auto;
+	max-width: 920px;
+	margin: 0 0 0 200px;
+}
+/**用于给js输出位置**********************/
+
+.table1{
+	width:1000px; 
+	border:0; 
+	margin: 0 0 0 100px;}
+
+.text1{}
+
+
+
+/*以上修改範圍以上修改範圍以上修改範圍以上修改範圍以上修改範圍*/
+@media only screen and (max-width:1600px){
+	.form{ position: absolute;left: 250px;transition: 0.2s;}
+	.Guidance{width: 95%;overflow: hidden;}
+	.Login{left:1000px;}
+	}
+@media only screen and (max-width:1550px){
+	.form{ position: absolute;left: 200px;width: 1200px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	}
+@media only screen and (max-width:1450px){
+	.form{ position: absolute;left: 150px;}
+	}
+@media only screen and (max-width:1400px){
+	.form{ position: absolute;left: 100px;}
+	}
+@media only screen and (max-width:1350px){
+	.form{ position: absolute;left: 50px;}
+	}
+@media only screen and (max-width:1300px){
+	.form{ position: absolute;left: 0px;width: 1100px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	}
+@media only screen and (max-width:1200px){
+	.Login{left:900px}
+}
+@media only screen and (max-width:1100px){
+	.form{width:100%;}
+	.Guidance img{display: none;}
+	.Login{left:800px}
+	.table1 {width:900px;}
+}
+@media only screen and (max-width:900px){
+	.Guidance img{display: none;}
+	.Guidance span{margin:6px 20px 0 20px;}
+	.Login{left:700px;}
+	.table1 {width:700px;}
+}
+@media only screen and (max-width:800px){
+	.Guidance span{margin:6px 10px 0 10px;}
+	.form table{width:600px;}
+	.Login{left:600px;}
+	.table1 {width:600px;}
+	
+}
+
+
+
+.foot{
+	height: 50px;
+	width: 100%;
+	border-top-style:groove;
+	text-align: center;
+}

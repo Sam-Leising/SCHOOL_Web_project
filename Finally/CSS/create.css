@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+a{color:white;}
+a:hover{color: aqua;}
+		
+html,body{
+	width:100%;
+	height:100%;
+	font-family: cursive;
+}
+		
+.main{
+	width:100%;
+	height: 100%;
+	background:url("../image/login&create_BG.jpg");
+	/*背景圖片來自於https://wallpaperscraft.com/download/cat_grass_peeps_81751/1920x1080 */
+}
+	/*背景*/
+
+/*主題圖案*/
+.Web_title{
+	width:100%;
+	height:100px;
+	background-image:url("../image/Web_Title_white.png");
+	position: absolute;
+	background-repeat: no-repeat;	
+}
+
+/*返回文字設置*/
+.BackBT{
+	color:white;
+	position: absolute;
+	top: -20px;
+	left: 20px;
+	font-size: 20px;	
+}
+
+/*表格大小，透明度*/
+.create_Information{
+	width:700px;
+	height:850px;
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 10px;
+	padding: 50px 0;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.4);
+}
+
+/*表格内容排版*/
+.create_Information > div{
+	width:400px;
+	height: 50px;
+	margin: 40px auto;
+	color: white;
+}
+
+/*表格标题文字格式*/
+.create_Information > p{
+	text-align: center;
+	color: white;
+	font-size: 25px;
+}
+
+/*表格信息文字格式*/
+.create_Information > div span{
+	display:inline-block;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/*輸入框text屬性*/
+.create_Information > div input[type=text]{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+	/*输入框透明*/
+	border: none;
+	border-bottom: 1px solid white;
+	outline: none;
+	color: white;
+}
+
+/*輸入框radio屬性*/
+.create_Information > div input[type=radio]{
+	width:30%;
+	height: 30px;
+	margin-top: 15px;
+}
+
+/*輸入框password屬性*/
+.create_Information > div input[type=password]{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+	/*输入框透明*/
+	border: none;
+	border-bottom: 1px solid white;
+	outline: none;
+	color: white;
+}
+
+/*email格式*/
+.create_Information > div input[type=email]{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+	/*输入框透明*/
+	border: none;
+	border-bottom: 1px solid white;
+	outline: none;
+	color: white;
+}
+
+/*確認按鈕*/
+.create_Information .EnterBut{
+	width: 200px;
+	height: 50px;
+	border-radius: 50px;
+	background-image: linear-gradient(to right,#06AEF2,#99E2FF);
+	text-align: center;
+	padding-top: 10px;
+	box-sizing: border-box;
+	font-size: 20px;
+	cursor: pointer;
+}
+		
+svg{
+	vertical-align:middle;
+}

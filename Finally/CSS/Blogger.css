@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width:100%;
+	height:100%;
+	background-image: url("../image/Title_bg1.png");
+	font-family: cursive;
+}
+pre{font-family:cursive;}
+
+.Login a {color:black;}
+.Login a:hover{color: aqua;}
+
+.Guidance a{color:black; text-decoration: none;}
+.Guidance a:hover{color:aqua;}
+
+.form{
+	position: absolute;
+	top:20px;
+	left: 300px;
+	width: 1300px;
+	height:auto;
+	background-color: white;
+	border-radius: 25px;
+	box-shadow:20px -12px 15px 1px rgba(0,0,0,0.5);
+}
+.Header{
+	height: 100px;;
+}
+
+.Web_title{
+	width: 100%;
+	position: absolute;
+}/*标题*/
+
+.Login{
+	color:black;
+	position: absolute;
+	left: 1200px;
+	top:60px;
+	font-size: 20px;
+}
+/*置頂網站主題*/
+
+
+
+.Guidance{
+	width: 1280px;
+	height: 50px;
+	border-bottom-style:solid;
+	border-top-style: solid;
+	border-image: linear-gradient(to right,#000,#FFF);
+	border-image-slice:1;
+	margin: 0 0 0 10px;
+}
+/*導航欄樣式*/
+
+.Guidance span{
+	float: left;
+	margin: 6px 60px 0 20px;
+	font-size: 35px;
+}/*导航栏按钮位置*/
+.Guidance span:hover{
+	color:#00E3FF;
+	transform: scale(1.1);
+	transition: 0.5s;
+	top: 0;
+	left: 0;
+}/*导航栏按钮鼠标效果*/
+
+.Guidance span:hover img{
+	transform:scale(1.2);
+	transition: 0.5s;
+}/*导航栏按钮对应图片效果*/
+/*************下 修改范围*********************/
+.container{
+	width:200px;
+	height:200px;
+	position: relative;
+	margin: 200px 0 200px 500px;
+}
+.container a{
+	color:black;
+}
+
+.container .item{
+	position:absolute;
+	width:100%;
+	height:100%;
+	transform-origin: center bottom;
+	transition: all 0.5s;
+	left:0;
+	top:0;	
+}
+/*当位于左边时的效果*/
+.container .left{
+	left:-300px;
+	filter: blur(20px);
+	font-size:0;
+}
+/*当位于右边时的效果*/
+.container .right{
+	left:300px;
+	filter: blur(20px);
+	font-size:0;
+}
+/*当位于中间时的效果*/
+.middle{
+	transform:scale(1.4);
+	z-index: 200;
+}
+
+/*************上 修改范围*********************/
+
+
+
+@media only screen and (max-width:1600px){
+	.form{ position: absolute;left: 250px;transition: 0.2s;width: 1200px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	.Login{left: 1000px;}
+}
+	
+@media only screen and (max-width:1550px){
+	.form{ position: absolute;left: 200px;width: 1200px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	}
+@media only screen and (max-width:1450px){
+	.form{ position: absolute;left: 150px;}
+	}
+@media only screen and (max-width:1400px){
+	.form{ position: absolute;left: 100px;}
+	}
+@media only screen and (max-width:1350px){
+	.form{ position: absolute;left: 50px;}
+	}
+@media only screen and (max-width:1300px){
+	.form{ position: absolute;left: 0px;width: 1100px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	}
+@media only screen and (max-width:1200px){
+	.form{ position: absolute;left: 0px;width: 1090px;}
+	.Guidance{width: 95%;overflow: hidden;}
+	.Login{left:900px}
+	}
+@media only screen and (max-width:1100px){
+	.form{ position: absolute;left: 0px;width: 100%;}
+	.Guidance img{display: none;}
+	.Login{left:800px}
+	.container{width:170px;height:170px;}
+}
+@media only screen and (max-width:1000px){
+	.container{width:150px;height:150px;margin-left: 400px;}
+	.container .right{left:200px;}
+	.container .left{left:-200px;}
+}
+@media only screen and (max-width:900px){
+	.Guidance img{display: none;}
+	.Guidance span{margin:6px 20px 0 20px;}
+	.Login{left:700px;}
+	.container{width:130px;height:130px;margin-left: 350px;}
+	.container .right{left:200px;}
+	.container .left{left:-200px;}
+}
+@media only screen and (max-width:800px){
+	.Guidance span{margin:6px 10px 0 10px;}
+	.Login{left:600px;}
+	.container{width:130px;height:130px;margin-left: 300px;}
+}
+	
+.foot{
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	border-top-style:groove;
+	text-align: center;
+	}

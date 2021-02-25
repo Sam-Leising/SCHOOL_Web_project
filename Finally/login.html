@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="CSS/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="main">
+		
+		<div class="Web_title"></div>
+		
+		<form method="post" enctype="multipart/form-data" name="myForm">
+			
+		<div class="loginFrame">
+			<p class="loginTitle">Login</p>
+			
+			<div class="user">
+				<label>
+					<span></span>
+					<span>UserID</span>
+					<input type="text" id="login_username" placeholder="UserID"/>
+				</label>
+			</div>
+				
+			<div class="user">
+				<label>
+					<span></span>
+					<span>Password</span>
+					<input type="password" id="user_password" placeholder="Password"/>
+				</label>
+			</div>
+			
+			<div class="enterBut">
+				<span onClick="Login()">Enter</span>
+				<div class="tishi">Please Enter:<br>User ID:123<br>Password:123</div>
+				<script type="text/javascript">
+					function Login(){
+						if(document.myForm.login_username.value==""){
+							alert('User ID is empty!');
+							document.myForm.login_username.docus();
+						}
+						if(document.myForm.user_password.value==""){
+							alert("Password is empty!");
+							document.myForm.user_password.docus();
+						}
+						if(document.myForm.login_username.value!=123){
+							alert('Wrong User ID or Password');
+							document.myForm.login_username.docus();
+						}
+						if(document.myForm.user_password.value!=123){
+							alert('Wrong User ID or Password');
+							document.myForm.user_password.docus();
+						}
+						window.location.href="HTML/Home.html";
+					}
+				</script>
+			</div>
+			
+			<div class="forgetBut">
+				<span onClick="Forgot()"><u>Forgot</u></span>
+				<script type="text/javascript">
+					function Forgot(){
+					alert("Function in maintenance");
+					}
+				</script>
+			</div>
+			
+			<div class="createBut">
+				<span><u><a href="HTML/create.html">Create</a></u></span>
+			</div>
+
+		</div>
+		</form>
+	</div>
+	
+</body>
+</html>

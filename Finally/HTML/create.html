@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Create</title>
+<link href="../CSS/create.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<div class="main">
+		<div class="Web_title"></div>
+		<form method="post" enctype="multipart/form-data" name="myForm">	
+			<div class="create_Information" id="create_information">
+				<p class="createTitle">User Information</p>
+				<div class="BackBT"><u><a href="../login.html">Exit</a></u></div>
+
+
+				<!--用户登录账号-->
+				<div class="userID">
+					<label>
+						<span></span>
+						<span>UserID:</span>
+						<input type="text" name="login_username" id="login_username" placeholder="UserID"/>
+					</label>
+				</div>
+
+				<!--用户名称，非实名-->
+				<div class="userName">
+					<label>
+						<span></span>
+						<span>Name:</span>
+						<input type="text" name="user_name" id="user_name" placeholder="UserName"/>
+					</label>
+				</div>
+
+				<!--用戶性別，如果以後還無法學會讀取radio的數據將考慮刪除-->
+				<div class="userGender">
+					<label>
+						Male:
+						<input type="radio" id="gender_male" name="gender" value="male" checked>
+						Female:
+						<input type="radio" id="gender_female" name="gender" value="female">
+					</label>
+				</div>
+
+				<!--用戶手機號碼-->
+				<div class="userPhoneNumber">
+					<label>
+						<span></span>
+						<span>Phone Number:</span>
+						<input type="text" maxlength="8" onkeyup="value=value.replace(/[^\d\.]/g,'')" name="user_phonenumber" id="user_phonenumber" placeholder="Phone number:8 numbers"/>
+						<!--电话号码，限制八位数字-->
+					</label>
+				</div>
+
+				<!--用戶密碼-->
+				<div class="userPassword1">
+					<label>
+						<span></span>
+						<span>Password:</span>
+						<input type="password" name="user_password" id="user_password" placeholder="First Password"/>
+					</label>
+				</div>
+
+				<!--用戶密碼二次確認-->
+				<div class="userPassword2">
+					<label>
+						<span></span>
+						<span>Enter Password:</span>
+						<input type="password" name="user_password2" id="user_password2" placeholder="Second Password"/>
+					</label>
+				</div>
+
+				<!--用戶郵件-->
+				<div class="userEmail">
+					<label>
+						<span></span>
+						<span>Email:</span>
+						<input type="email" name="user_email" id="user_email" placeholder="email include '@'"/>
+					</label>
+				</div>
+
+				<!--確認按鈕-->
+				<div class="EnterBut">
+					<span onClick="CE()">Enter</span>
+				</div>
+
+				<!---用戶輸入信息讀取----------------------------------------->
+				<script type="text/javascript">
+					function CE() {
+						
+						
+						
+						if(document.myForm.login_username.value==''){
+							alert('User ID is empty!');
+							document.myForm.login_username.docus();
+							//檢驗login_username是否空白
+						}
+						if(document.myForm.user_name.value==''){
+							alert('User name is empty!');
+							document.myForm.user_name.docus();
+							//檢驗user_name是否空白
+						}
+						if(document.myForm.user_phonenumber.value==''){
+							alert('Phone number is empty!');
+							document.myForm.user_phonenumber.docus();
+							//檢驗user_phonenumber是否空白
+						}
+
+						if(document.myForm.user_password.value==''){
+							alert('Password is enpty!');
+							document.myForm.user_password.docus();
+							//檢驗user_password是否空白
+						}
+						if(document.myForm.user_password2.value==''){
+							alert('Enter password is enpty!');
+							document.myForm.user_password2.docus();
+							//檢驗user_password1是否空白
+						}
+						if (document.myForm.user_email.value==''){
+							alert('E-mail is empty!');
+							document.myForm.user_email.docus();
+							//檢驗user_email是否空白
+						}
+						if (document.getElementById("gender_male").checked){
+							var user_gender = ('Male');
+							}else {var gender = ('Female');}
+						var user_password = document.getElementById("user_password").value;
+						var user_password2 = document.getElementById("user_password2").value;
+						
+						if(user_password != user_password2){
+							alert('Different Password');
+							document.myForm.user_password.docus();
+							//檢驗密碼是否相同
+						}
+						var user_email = document.getElementById("user_email").value;
+						if(!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(user_email)) {
+							alert("Wrong format!");
+							document.getElementById("user_email").docus();
+							//檢驗郵箱格式
+						}
+						var login_username = document.getElementById("login_username").value;
+						var user_name = document.getElementById("user_name").value;
+						var user_phonenumber = document.getElementById("user_phonenumber").value;
+						if(user_phonenumber<8){
+						   alert("Phone number does not meet the requirements");
+							document.myForm.login_userphonenumber.docus();
+						   }
+						var user_password = document.getElementById("user_password").value;
+						var user_email = document.getElementById("user_email").value;
+						
+						var qqsj="login_username:"+login_username + "  "+"user_name:"+user_name+"  "+("user_gender:")+user_gender+"  "+"user_phonenumber:"+user_phonenumber+"  "+"user_password:"+user_password+"  "+"user_email:"+user_email;
+							//用戶所輸入的所有資料
+						alert(qqsj);
+							//顯示上方用戶所有輸入資料
+					}
+				</script>
+				<!--用戶輸入信息讀取-->
+			</div>
+		</form>
+	</div>
+</body>
+</html>

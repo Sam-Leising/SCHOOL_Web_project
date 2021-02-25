@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Share</title>
+<!-- TemplateEndEditable -->
+<link href="../CSS/moban.css" rel="stylesheet" type="text/css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div class="form">
+		<div class="Header">
+			<div class="Web_title"><a href="../Home.html"><img src="../image/Web_Title_black.png" alt=""/></a></div>
+			<div class="Login"><a href="../login.html">Login</a></div>
+		</div>
+	
+	
+		<div class="Guidance">
+			<span><img src="../image/Guidance_1.png" alt=""/><a href="../Home.html">Home</a></span>
+			<span><img src="../image/Guidance_2.png" alt=""/><a href="https://www.bilibili.com/">Master</a></span>
+			<span><img src="../image/Guidance_3.png" alt=""/><a href="https://www.bilibili.com/">Two</a></span>
+			<span><img src="../image/Guidance_4.png" alt=""/><a href="https://www.bilibili.com/">Three</a></span>	
+		</div>
+		<!-- TemplateBeginEditable name="EditRegion3" -->EditRegion3<!-- TemplateEndEditable -->
+		
+	<div class="foot">
+		<pre>
+			SHEN LICHENG  (200079386)   From.SHA TIN IVE  Class:IT114118/1B  Course:ITE3006
+			Whatsapp:12345678   E-mail:12345678@gmail.com
+			</pre>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

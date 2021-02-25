@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Blogger</title>
+<link href="../CSS/Blogger.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="form">
+		<div class="Header">
+			<div class="Web_title"><a href="Home.html"><img src="../image/Web_Title_black.png" alt=""/></a></div>
+			<div class="Login"><a href="../login.html">Login</a></div>
+		</div>
+	
+	
+		<div class="Guidance">
+			<span><img src="../image/Guidance_1.png" alt=""/><a href="Home.html">Home</a></span>
+			<span><img src="../image/Guidance_2.png" alt=""/><a href="Information.html">Information</a></span>
+			<span><img src="../image/Guidance_3.png" alt=""/><a href="Blogger.html">Blogger</a></span>
+			<span><img src="../image/Guidance_4.png" alt=""/><a href="Suggest.html">Suggest</a></span>	
+		</div>
+		
+		
+		<div class="container">
+			<div class="item left">
+				<img src="../image/up2-2.png" width="100%" alt="">
+				<div class="item1 test1">
+					My name is Luna Rose<br>
+					<a href="https://instagram.com/hello_luna_rose?igshid=1hdpt4vcz1sxh" target="_blank">This is my IG</a>
+				</div>
+			</div>
+		
+			<div class="item middle">
+				<img src="../image/up1-1.png" width="100%" alt="">
+				<div class="item1 test2">
+					My name is Nala<br>
+					<a href="https://instagram.com/lovenalaco?igshid=12mwjl5stwf2p" target="_blank">This is my IG</a>
+				</div>
+			</div>
+
+			<div class="item right">
+				<img src="../image/up3-3.png" width="100%" alt="">
+				<div class="item1 test3">
+					My name is maple<br>
+					<a href="https://instagram.com/maple.cat?igshid=1p3dj1yz0mxsl" target="_blank">This is my IG</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script>
+		const items = document.querySelectorAll('.item');
+		const items1 = document.querySelectorAll('.item1');
+		for(let i=0;i<items.length;i++){
+			items[i].addEventListener('click',function(){
+				//使被點擊的元素處於中間位置
+				this.classList.remove('left','middle','right');
+				this.classList.add('middle');
+				//左側元素變化
+				let left = this.previousElementSibling ?? items[items.length -1];
+				left.classList.remove('left','middle','right');
+				left.classList.add('left');
+				
+				//右側元素變化
+				let right = this.nextElementSibling ?? items[0];
+				right.classList.remove('left','middle','right');
+				right.classList.add('right');
+			
+				
+			})
+		}
+	</script>
+		
+		
+		<div class="foot">
+			<pre>xxxxxxx  (0000000)   From.xxx  Class:xxx  Course:ITE3006<br>Whatsapp:12345678   E-mail:12345678@gmail.com
+			</pre>
+		</div>
+		
+	</div>
+</body>
+</html>
