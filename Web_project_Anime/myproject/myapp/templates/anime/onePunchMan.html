@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% include "object_list" %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    {% block content %}
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home/">每周推薦</a></li>
+            <li class="breadcrumb-item active" aria-current="page">One Piece</li>
+        </ol>
+    </nav>
+    <center>
+        <div class="card col-lg-4 col-sm-12 mb-12">
+            <img src="https://images6.alphacoders.com/656/656724.png" class="card-img-top" alt="onePiece">
+        </div>
+    </center>
+    </br>
+    <div class="card col-lg-12 col-sm-12 mb-12">
+        <div class="card-body">
+            <h5 class="card-title">One Punch Man</h5>
+            <p class="card-text">不知从何时开始，各种具有超自然力量的“怪人”不断地出现并造成灾害，为了打击它们，由某富豪所创立的“英雄协会”开始招募全世界的能人异士成为职业英雄与怪人对抗。
+
+                故事主角埼玉是一名兴趣使然英雄，因为22岁时打败了怪人‘蟹人’并且拯救了小孩而燃起小时候想成为英雄的梦想，接下来持续三年的每一天不间断地做100下俯卧撑、100下仰卧起坐、100下深蹲和长跑10公里以及和怪人战斗、不断提升战斗力与身体机能，最终打破生物限制器的自我训练而变的强大，在无人知晓的情况下从事英雄的工作。最终掉光所有毛发成为了光头，但也因此获得最强的力量。
+
+                埼玉成为了最强英雄后，却因为力量太过强大，没了当初训练期间能打败怪人那激昂的情绪并渴望遇见能与之一战的强大对手。在一连串事件中，埼玉遇见了各式各样的英雄和怪人，收了魔鬼改造人杰诺斯做为徒弟，并加入英雄协会以获得官方认可。与众多英雄一起开始了对抗各种怪人以及灾难的生活。
+
+                一日，外星球的暗黑物质首领，全宇宙的霸主‘波罗斯’来到地球想找一个能和自己决一死战的强大对手，埼玉将和他爆发一场惊天动地的大战。
+
+                另一方面，英雄协会为了因应“地球不妙了”的末日预言而召开了一场征求高额悬赏犯及犯罪份子共同参与保卫地球及人类免于受怪人毁灭的会议。此时，一名名为‘饿狼’的武术天才现身，声称自己就是预言提到的神级怪人灾害并击败了在场所有的英雄与罪犯，其后饿狼便展开了“英雄狩猎”活动，目标是击败所有的英雄并成为最强的怪人。
+
+                与此同时，以‘怪人王远吕智’为首，名为“怪人协会”的怪人集团在一旁虎视眈眈，注意到了饿狼的英雄狩猎活动后打算将其招募为怪人协会干部，并即将向人类社会发动前所未有的战争。兴趣使然的英雄，埼玉与人类怪人饿狼两人之间即将展开价值观冲突的战斗。
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">地区： 日本</li>
+            <li class="list-group-item">首播时间： 2012年6月14日</li>
+            <li class="list-group-item">播放状态： 连载中</li>
+            <li class="list-group-item">剧情类型： 超级英雄、幽默、动作</li>
+        </ul>
+        <div class="card-body">
+            <a href="https://zh.wikipedia.org/wiki/%E4%B8%80%E6%8B%B3%E8%B6%85%E4%BA%BA" class="card-link">更多</a>
+            <a href="" class="card-link">觀看</a>
+        </div>
+        <div style="font-size: xx-large;">相關視頻：</div>
+        <center>
+            <iframe width="949" height="534" src="https://www.youtube.com/embed/pkfL3_DM7O4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </center>
+        <br><br><br>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>

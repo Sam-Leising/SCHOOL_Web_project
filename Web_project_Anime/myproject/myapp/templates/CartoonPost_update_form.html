@@ -1,0 +1,56 @@
+{% extends "include/base.html" %}
+{% load widget_tweaks %}
+{%  block content %}
+<style type="text/css">
+
+    form {
+        background: saddlebrown;
+        margin-top: 50px;
+        width: 600px;
+        padding: 10px;
+        border-radius: 5px;
+        background: rgb(230, 230, 230);
+    }
+</style>
+<center>
+    <div class="col-lg-9">
+        <form action="" method="POST" enctype="multipart/form-data" style="text-align: left;">
+            <a href="/cartoon/" style="color: black;">
+                <div style="float: left;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </div>
+            
+                <div style="float: left;"><u style="font-size: 20px;color: black;">Exit</u></div>
+            </a>
+            <br><br>
+            {% csrf_token %}
+            {{ form.non_fields_errors }}
+            <div class="fieldWrapper">
+                <label for="{{ form.title.id_for_label }}"> Title : </label>
+                {{ form.title | add_class:"form-control" }}
+                {{ form.title.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.address.id_for_label }}"> Address : </label>
+                {{ form.address | add_class:"form-control" }}
+                {{ form.address.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.content.id_for_label }}"> Content : </label>
+                {{ form.content | add_class:"form-control" }}
+                {{ form.content.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.profile_pic.id_for_label }}"> Profile_pic : </label>
+                {{ form.profile_pic | add_class:"form-control" }}
+                {{ form.profile_pic.errors }}
+            </div>
+            <br>
+            <button type="submit" class="btn btn-info"> UPDATE </button>
+            <button type="reset" class="btn btn-info"> RESET </button>
+        </form>
+    </div>
+</center>
+{% endblock content %}

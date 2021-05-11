@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% include "object_list" %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    {% block content %}
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home/">每周推薦</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Naruto</li>
+        </ol>
+    </nav>
+    <center>
+        <div class="card col-lg-4 col-sm-12 mb-12">
+            <img src="https://images3.alphacoders.com/135/135625.jpg" class="card-img-top" alt="onePiece">
+        </div>
+    </center>
+    </br>
+    <div class="card col-lg-12 col-sm-12 mb-12">
+        <div class="card-body">
+            <h5 class="card-title">Naruto</h5>
+            <p class="card-text">
+                漫畫自1999年開始在日本集英社旗下的少年漫畫雜誌《周刊少年Jump》上連載。 2002年，由日本動畫工作室Studio Pierrot根據漫畫原作所改編制作的電視動畫版《火影忍者》開始在日本東京電視台播出。
+                2004年，漫畫進而改編成電影。 2006年，漩渦鳴人入選美國《新聞周刊》日文版於10月18日發行的特集中選出的“全世界最受尊敬的100位日本人”。 [1]
+
+                2010年集英社宣布系列漫畫的累計發行量已突破一億冊[2]。 《火影忍者》在三十多個國家及地區被翻譯並出版發行，截至2014年8月，系列漫畫在全球的累計發行量已突破2億本。
+                [3]連載達15年的《火影忍者》已於2014年11月10日在該年《周刊少年Jump》第50期上，以700話完結篇劃下句點。
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">地区： 日本</li>
+            <li class="list-group-item">类型: 漫画 / 動漫</li>
+            <li class="list-group-item">作画: 株式會社Pierrot</li>
+            <li class="list-group-item">连载状态: 完結</li>
+        </ul>
+        <div class="card-body">
+            <a href="https://zh.wikipedia.org/zh-hk/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85" class="card-link">更多</a>
+            <a href="#" class="card-link">觀看</a>
+        </div>
+        <div style="font-size: xx-large;">相關視頻：</div>
+        </br>
+        <center>
+            <iframe width="854" height="534" src="https://www.youtube.com/embed/k8aPHufNHkE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </center>
+        <br><br><br>
+    </div>
+    {% endblock content %}
+</body>
+</html>

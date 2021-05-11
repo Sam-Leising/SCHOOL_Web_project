@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% include "object_list" %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    {% block content %}
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home/">每周推薦</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Solo Leveling</li>
+        </ol>
+    </nav>
+    <center>
+        <div class="card col-lg-4 col-sm-12 mb-12">
+            <img src="https://images4.alphacoders.com/106/1066533.png" class="card-img-top" alt="onePiece">
+        </div>
+    </center>
+    </br>
+    <div class="card col-lg-12 col-sm-12 mb-12">
+        <div class="card-body">
+            <h5 class="card-title">Solo Leveling</h5>
+            <p class="card-text">
+                10年前，世界與其他次元鏈接的“門”被打開，各種魔物不斷出現，於是乎能力各異的獵魔者也隨之出現，被稱為“獵人”。程肖宇是一名實力最弱的E級獵人，在一次挑戰任務中，遇到了可怕的隱藏挑戰。生死存亡之際，他居然獲得了升級系統！在系統的利用下，他能成為最強獵人嗎？
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">类型: 漫画</li>
+            <li class="list-group-item">作画: DUBU(主笔) + Chugong（原著）</li>
+            <li class="list-group-item">连载平台: 快看漫画</li>
+            <li class="list-group-item">连载状态: 连载中</li>
+        </ul>
+        <div class="card-body">
+            <a href="https://baike.baidu.com/item/%E6%88%91%E7%8B%AC%E8%87%AA%E5%8D%87%E7%BA%A7/24284167"
+                class="card-link">更多</a>
+            <a href="#" class="card-link">觀看</a>
+        </div>
+        <div style="font-size: xx-large;">相關視頻：</div>
+        </br>
+        <center>
+            <iframe width="949" height="534" src="https://www.youtube.com/embed/la_B-cEyCWg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </center>
+        <br><br><br>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>

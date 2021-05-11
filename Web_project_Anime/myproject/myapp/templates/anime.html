@@ -1,0 +1,238 @@
+{% extends "include/anime_home.html" %}
+{% block content %}
+<style>
+    .pause {
+      background-position: 0 bottom !important;
+    }
+
+    .mscBtn {
+      width: fit-content;
+      height: fit-content;
+      display: block;
+    }
+</style>
+<div class="carousel slide col-lg-8 col-md-12 col-sm-12">
+    <div class="jumbotron">
+        <h1 class="display-4">二次元</h1>
+        <p class="lead">最受歡迎和最熱血的動漫都在此頁面中</p>
+        <hr class="my-4">
+        <p>20條必看的“日本動漫”推薦，不要失望！體育，幻想，冒險，輕小說，鮮血，鮮美動畫，動畫推廣</p>
+    </div>
+</div>
+
+<button type="button" class="btn btn-dark mb-2" style="position: fixed;left: 10px;top: 80px; z-index: 1;">
+    <a class="mscBtn" id="audioBtn" title='paused/start' style="cursor:pointer;">
+        <img id="music_img" src="../static/image_anime/playmusic.png">
+    </a>
+</button>
+<audio id="bgMusic" src="../static/bgm/One Piece.mp3" autoplay="autoplay" loop="true"></audio>
+
+
+<!-- Buttons -->
+<div class="btn-group mb-2">
+    <button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#videoModal"
+        data-video="https://www.youtube.com/embed/Ujj41xq1eJE">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg>
+        One Piece
+    </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#videoModal"
+        data-video="https://www.youtube.com/embed/atxYe-nOa9w">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg>
+        One Punch Man
+    </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#videoModal"
+        data-video="https://www.youtube.com/embed/qId-H0BuYFo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg>
+        Demon Slayer
+    </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#videoModal"
+        data-video="https://www.youtube.com/embed/_QJy7V3NK7M">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg>
+        Naruto
+    </button>
+</div>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark border-dark">
+                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body bg-dark p-0">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% if object_list %}
+<!-- second method↓↓↓↓↓↓↓second method↓↓↓↓↓↓↓second method-->
+{% for post in object_list %}
+<div class="card mb-3 col-10 shadow p-3 bt-3 bg-body rounded"
+    style="padding-left:1px; padding-top: 1px;padding-bottom: 1px;text-align: left; height: auto;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <a href="{{ post.address }}" target="_blank">
+                <img class="card-img-top" src="{{ post.profile_pic.url }}" alt="Card image cap">
+            </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <div class="mb-5">
+                    <h5 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                            <path
+                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            <path
+                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        {{ post.title }}
+                    </h5>
+
+                    <div class="d-none d-sm-none d-md-block mb-2">
+                        <p class="card-text">{{ post.content }}</p>
+                    </div>
+
+                    <div class="d-none d-sm-none d-md-block mt-3">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>聲優(CV):{{ post.cv }}
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted mt-5" style="position: absolute;bottom: -15;left: 0%;width: 100%;">
+                    <div style="float:right;">
+                        {% if user.is_superuser %}
+                        <a href='{% url "anime_update" post.id %}'> UPDATE </a>
+                        &nbsp;&nbsp;
+                        <a href='{% url "anime_delete" post.id %}'> DELETE </a>
+                        &nbsp;&nbsp;
+                        {% endif %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-clock-history" viewBox="0 0 16 16">
+                            <path
+                                d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                            <path
+                                d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>:{{ post.updated}}
+                    </div>
+                    <br>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% if user.is_superuser %}
+<div class="card mb-3 col-10 shadow p-3 mt-3 bg-body rounded"
+    style="padding-left:1px; padding-top: 1px;padding-bottom: 1px;text-align: left;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <a href="/anime_create/">
+                <svg style=" background-color:darkgray;" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-plus-circle" viewBox="-12 -11 40 40">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+            </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                        <path
+                            d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    Title:
+                </h5>
+                <p class="card-text">Information...</p>
+
+                <div class="mb-2" style="position:absolute; bottom:0;width: 100%;">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>(CV):{{ post.cv }}
+                    </p>
+                    <div style="float: left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-clock-history" viewBox="0 0 16 16">
+                            <path
+                                d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                            <path
+                                d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>:
+                    </div>
+                    <div style="float: right;margin-right: 50px;">
+                        <a href='/anime_create/'> Create </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!--second method↑↑↑↑↑↑↑second method↑↑↑↑↑↑↑second method -->
+
+<script>
+    $(document).ready(function () {
+        // Set iframe attributes when the show instance method is called
+        $("#videoModal").on("show.bs.modal", function (event) {
+            let button = $(event.relatedTarget); // Button that triggered the modal
+            let url = button.data("video");      // Extract url from data-video attribute
+            $(this).find("iframe").attr({
+                src: url,
+                allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            });
+        });
+
+        // Remove iframe attributes when the modal has finished being hidden from the user
+        $("#videoModal").on("hidden.bs.modal", function () {
+            $("#videoModal iframe").removeAttr("src allow");
+        });
+    });
+
+        $(function () {
+        var music = document.getElementById("bgMusic");  
+        music.volume = 0.05;
+
+        var music_img=document.getElementById("music_img").getAttribute("src");
+        $("#audioBtn").click(function () {
+        if (music.paused) {
+            music.play();
+            document.getElementById("music_img").src="../static/image_anime/playmusic.png";
+            $("#audioBtn").removeClass("pause").addClass("play");
+        } else {
+            music.pause();
+            document.getElementById("music_img").src="../static/image_anime/stopmusic.png";
+            $("#audioBtn").removeClass("play").addClass("pause");
+        }
+        });
+    });
+</script>
+{% endblock content %}

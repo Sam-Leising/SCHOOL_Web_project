@@ -1,0 +1,56 @@
+{% extends "include/base.html" %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <img alt="Brand" style="height: 200px; width: 200px;margin-top: 50px;" src="../static/images/logo.png">
+    </center>
+    {% if request.user.is_authenticated %}
+    You're logged in as {{ request.user }}
+    <a href='/logout/'>LOGOUT</a>
+    {% else %}
+    <div class="col-10 mx-auto col-lg-5 col-xl-4 mt-5 " style="width: 450px;" id="d3">
+        <form class="p-5 border rounded-3 bg-light" action="" method="POST">
+            <h1 style="text-align: center;">Login</h1>
+            {% csrf_token %}
+            <div class="fieldWrapper">
+                <label for="{{ form.username.id_for_label }}"> Username : </label>
+                {{ form.username | add_class:"form-control" }}
+                {{ form.username.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.password.id_for_label }}"> Password : </label>
+                {{ form.password | add_class:"form-control" }}
+                {{ form.password.errors }}
+            </div>
+            <br>
+            <button type="submit" class="w-100 btn btn-lg btn-primary" onclick="update()" onclick="DelayRedirect()">
+                LOGIN </button>
+
+
+            <div>
+                <div class="checkbox mb-3" style="float: left;">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <div class="mb-3" style="float: right;">
+                    <a href='/signup/'>Sign UP </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+
+
+    {% endblock content %}
+</body>
+
+</html>

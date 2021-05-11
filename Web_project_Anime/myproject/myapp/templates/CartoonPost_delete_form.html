@@ -1,0 +1,38 @@
+{% extends "include/base.html" %}
+{% load widget_tweaks %}
+{%  block content %}
+<style type="text/css">
+    #background{
+        background: rgb(255, 255, 255);
+        margin-top: 50px;
+        width: 300px;
+        height: 100px;
+        border-radius: 5px;
+        padding: 20px;
+    }
+ 
+    form{
+     margin-top: 100px;
+     background: rgb(230, 230, 230);
+     padding: 20px;
+     width: 400px;
+     border-radius: 5px;
+ 
+    }
+     
+ </style>
+<center>
+    <div class="col-lg-9">
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {{ form.non_fields_errors }}
+            <div class="fieldWrapper" id="background">
+                Are you sure you want to delete?
+            </div>
+            <br>
+            <button type="submit" class="btn btn-info"> Yes </button>
+            <a href="/home/" class="btn btn-info">No</a>
+        </form>
+    </div>
+</center>
+{% endblock content %}

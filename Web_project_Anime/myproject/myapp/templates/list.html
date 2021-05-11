@@ -1,0 +1,51 @@
+{% extends "home.html" %}
+{% block content %}
+<center>
+    {% if object_list %}  
+    <div class="row col-lg-10">
+        {% for post in object_list %}
+            <div class="col-lg-4 col-sm-6 mb-4 portfolio-item">
+                <div class="card">
+                    <img class="card-img-top"  src="{{ post.profile_pic.url }}" alt="Card image cap">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.content }}</p>
+                    <a href="{{ post.address }}" class="btn btn-primary">Go somewhere</a>
+                    {% if user.is_superuser %}
+                    Last updated: {{ post.updated}}
+                    <a href='{% url "update" post.id %}'> UPDATE </a>
+                    <a href='{% url "delete" post.id %}'> DELETE </a>
+                    {% endif%}
+                    <br>
+                </div>
+            </div>
+        {% endfor %}
+        {% if user.is_superuser %}
+            <div class="col-lg-4 col-sm-6 mb-4 portfolio-item">
+                <div class="card">
+                    <a href="/create/" >
+                        <svg style=" background-color:darkgray;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle" viewBox="-12 -11 40 40">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                    </a>
+                    <h5 class="card-title">Title</h5>
+                    <p class="card-text">Content</p>
+                    <a href="#" class="btn btn-primary">Address</a>
+                    
+                    Last updated: {{ post.updated}}
+                    <a href='/create/'> Create </a>
+                    
+                    <br>
+                </div>
+            </div>
+        {% endif%}
+    </div>
+
+</center>
+
+
+    {% endif %} 
+
+
+{% endblock content %}
+

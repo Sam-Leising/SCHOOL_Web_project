@@ -1,0 +1,56 @@
+{% extends "include/base.html" %}
+{% load widget_tweaks %}
+{%  block content %}
+    <div class="col-10 mx-auto col-lg-5 mt-5" style="width: 500px;">
+        <form class="p-5 border rounded-3 bg-light" action="" method="POST">
+            <div style="margin-left: -35px;margin-top: -30px;margin-bottom: 20px;">
+                <a href="/login/" style="color: black;">
+                    <div style="float: left;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                
+                    <div style="float: left;"><u style="font-size: 20px;color: black;">Exit</u></div>
+                </a>
+            </div>
+            <br>
+                <h1 style="text-align: center;">Sign Up</h1>
+
+            {% csrf_token %}
+            {{ form.non_fields_errors }}
+            <div class="fieldWrapper">
+                <label for="{{ form.username.id_for_label }}"> Username : </label>
+                {{ form.username | add_class:"form-control" }}
+                {{ form.username.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.password1.id_for_label }}"> Password : </label>
+                {{ form.password1 | add_class:"form-control" }}
+                {{ form.password1.errors }}
+            </div>
+            <div class="fieldWrapper">
+                <label for="{{ form.password2.id_for_label }}"> Confirm Password : </label>
+                {{ form.password2 | add_class:"form-control" }}
+                {{ form.password2.errors }}
+            </div>    
+            <div class="fieldWrapper">
+                <label for="{{ form.email.id_for_label }}"> Email : </label>
+                {{ form.email | add_class:"form-control" }}
+                {{ form.email.errors }}
+            </div>     
+            <div class="fieldWrapper">
+                <label for="{{ form.first_name.id_for_label }}"> First name : </label>
+                {{ form.first_name | add_class:"form-control" }}
+                {{ form.first_name.errors }}
+            </div>                
+            <div class="fieldWrapper">
+                <label for="{{ form.last_name.id_for_label }}"> Last name : </label>
+                {{ form.last_name | add_class:"form-control" }}
+                {{ form.last_name.errors }}
+            </div>            
+            <br>
+            <button type="submit" class="w-100 btn btn-lg btn-primary"> SIGN UP </button>
+        </form>
+    </div>
+{% endblock content %}
