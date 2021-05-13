@@ -19,11 +19,10 @@
           {% if user.is_superuser %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+              Admin Menu
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="/admin/">Admin</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
           {% endif %}
@@ -35,17 +34,17 @@
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               </svg>
               {{ request.user }}
-            {% if user.is_superuser %}
-            <span style="color: red;">(admin)</span>
-            {% endif %}
+              {% if user.is_superuser %}
+              <span style="color: red;">(admin)</span>
+              {% endif %}
           
-          <a href="/logout/"><button class="btn btn-primary" type="button"> LOGOUT </button></a>
-          {% else %}
-          <a href="/login/"><button class="btn btn-primary" type="button"> LOGIN </button></a>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="/signup/"><button class="btn btn-primary" type="button"> SIGN UP </button></a>
-          {% endif %}
-        </center>
+              <a href="/logout/"><button class="btn btn-primary" type="button"> LOGOUT </button></a>
+            {% else %}
+              <a href="/login/"><button class="btn btn-primary" type="button"> LOGIN </button></a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="/signup/"><button class="btn btn-primary" type="button"> SIGN UP </button></a>
+            {% endif %}
+          </center>
         </div>
       </div>
     </div>
